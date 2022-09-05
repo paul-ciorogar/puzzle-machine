@@ -39,9 +39,15 @@ internal class Program
         puzzle.SetStartingPiece(120, 80);
 
         //at the end, we want to see our puzzle
-        puzzle.ListPuzzle();
+        foreach (PuzzlePiece piece in puzzle.ListPuzzle())
+        {
+            string rectangle = $"ax:{piece.Rectangle.A.X} ay:{piece.Rectangle.A.Y} bx:{piece.Rectangle.B.X} by:{piece.Rectangle.B.Y} ";
+            string sides = $"top:{piece.Top} right:{piece.Right} bottom:{piece.Bottom} left:{piece.Left}";
+            Console.WriteLine(rectangle + sides);
+        }
     }
 
     #endregion
 
 }
+

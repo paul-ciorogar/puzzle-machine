@@ -5,7 +5,7 @@ public class Puzzle : IPuzzle
     private List<Int64> XCoordinates { get; init; }
     private List<Int64> YCoordinates { get; init; }
 
-    private Rectangle? StartingPiece = null;
+    private Rectangle? StartingPiece;
 
     public Puzzle(IEnumerable<Int64> xCoordinates, IEnumerable<Int64> yCoordinates)
     {
@@ -31,7 +31,7 @@ public class Puzzle : IPuzzle
 
     private PuzzlePiece GeneratePiece(Int64 ax, Int64 ay, Int64 bx, Int64 by)
     {
-        Rectangle rectangle = new Rectangle(ax, ay, bx, by);
+        Rectangle rectangle = new(ax, ay, bx, by);
         Face top = Face.Straight;
         Face left = Face.Straight;
         Face bottom = Face.Straight;

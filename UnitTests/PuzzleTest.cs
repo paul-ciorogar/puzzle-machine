@@ -216,7 +216,7 @@ public class PuzzleTest
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
     }
 
-    [TestMethod("when starting piece, in the middle, selected")]
+    [TestMethod("when starting piece, middle, selected")]
     public void Test6()
     {
         /*
