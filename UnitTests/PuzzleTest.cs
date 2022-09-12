@@ -25,9 +25,9 @@ public class PuzzleTest
     {
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part,
             part with {Rectangle = new(20, 10, 30, 20)},
             part with {Rectangle = new(30, 10, 40, 20)},
@@ -35,7 +35,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 20, 30, 30)},
             part with {Rectangle = new(30, 20, 40, 30)},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
     }
@@ -65,9 +65,9 @@ public class PuzzleTest
 
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30, 40 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part with {Top = Face.Tab, Right = Face.Tab},
             part with {Rectangle = new(20, 10, 30, 20), Top = Face.Tab, Right = Face.Tab, Left = Face.Blank },
             part with {Rectangle = new(30, 10, 40, 20), Top = Face.Tab, Left = Face.Blank },
@@ -78,7 +78,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 30, 30, 40), Right = Face.Tab, Bottom = Face.Blank, Left = Face.Blank},
             part with {Rectangle = new(30, 30, 40, 40), Bottom = Face.Blank, Left = Face.Blank},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
         puzzle.SetStartingPiece(14, 16);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
@@ -109,9 +109,9 @@ public class PuzzleTest
 
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30, 40 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part with {Top = Face.Tab, Right = Face.Blank},
             part with {Rectangle = new(20, 10, 30, 20), Top = Face.Tab, Right = Face.Blank, Left = Face.Tab },
             part with {Rectangle = new(30, 10, 40, 20), Top = Face.Tab, Left = Face.Tab },
@@ -122,7 +122,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 30, 30, 40), Right = Face.Blank, Bottom = Face.Blank, Left = Face.Tab},
             part with {Rectangle = new(30, 30, 40, 40), Bottom = Face.Blank, Left = Face.Tab},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
         puzzle.SetStartingPiece(33, 16);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
@@ -153,9 +153,9 @@ public class PuzzleTest
 
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30, 40 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part with {Top = Face.Blank, Right = Face.Tab},
             part with {Rectangle = new(20, 10, 30, 20), Top = Face.Blank, Right = Face.Tab, Left = Face.Blank },
             part with {Rectangle = new(30, 10, 40, 20), Top = Face.Blank, Left = Face.Blank },
@@ -166,7 +166,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 30, 30, 40), Right = Face.Tab, Bottom = Face.Tab, Left = Face.Blank},
             part with {Rectangle = new(30, 30, 40, 40), Bottom = Face.Tab, Left = Face.Blank},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
         puzzle.SetStartingPiece(17, 34);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
@@ -197,9 +197,9 @@ public class PuzzleTest
 
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30, 40 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part with {Top = Face.Blank, Right = Face.Blank},
             part with {Rectangle = new(20, 10, 30, 20), Top = Face.Blank, Right = Face.Blank, Left = Face.Tab },
             part with {Rectangle = new(30, 10, 40, 20), Top = Face.Blank, Left = Face.Tab },
@@ -210,7 +210,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 30, 30, 40), Right = Face.Blank, Bottom = Face.Tab, Left = Face.Tab},
             part with {Rectangle = new(30, 30, 40, 40), Bottom = Face.Tab, Left = Face.Tab},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
         puzzle.SetStartingPiece(32, 33);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
@@ -241,9 +241,9 @@ public class PuzzleTest
 
         Int64[] xCoordinates = new Int64[] { 10, 20, 30, 40 };
         Int64[] yCoordinates = new Int64[] { 10, 20, 30, 40 };
-        PuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
+        RectanglePuzzlePiece part = new(new Rectangle(10, 10, 20, 20), Face.Straight, Face.Straight, Face.Straight, Face.Straight);
 
-        PuzzlePiece[] expected = new[] {
+        RectanglePuzzlePiece[] expected = new[] {
             part with {Top = Face.Blank, Right = Face.Blank},
             part with {Rectangle = new(20, 10, 30, 20), Top = Face.Blank, Right = Face.Tab, Left = Face.Tab },
             part with {Rectangle = new(30, 10, 40, 20), Top = Face.Blank, Left = Face.Blank },
@@ -254,7 +254,7 @@ public class PuzzleTest
             part with {Rectangle = new(20, 30, 30, 40), Right = Face.Tab, Bottom = Face.Blank, Left = Face.Tab},
             part with {Rectangle = new(30, 30, 40, 40), Bottom = Face.Blank, Left = Face.Blank},
         };
-        Puzzle puzzle = new(xCoordinates, yCoordinates);
+        RectanglePuzzle puzzle = new(xCoordinates, yCoordinates);
         puzzle.SetStartingPiece(22, 24);
 
         CollectionAssert.AreEqual(expected, puzzle.ListPuzzle().ToList());
